@@ -1,0 +1,23 @@
+{
+ "manifest_version": 2,
+ "name": "Search",
+ "description": "",
+ "version": "1",
+ "author": "IL",
+ "permissions": ["tabs", "https://*.visual.force.com/apex/*", "clipboardRead","clipboardWrite", "contextMenus", "tabs", "activeTab"],
+  "content_scripts": [
+        {
+          "matches": [
+            "https://*.visual.force.com/apex/*"
+          ],
+          "js": ["background.js"],
+		  "run_at": "document_end",
+		  "persistent": false
+        }
+      ],
+	"browser_action": {
+	"default_icon": "l.png",
+	"default_title": "",
+	"default_popup": "popup.html"
+ }
+}
